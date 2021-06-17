@@ -4,7 +4,13 @@ import java.util.Random;
 public abstract class Hero extends Character implements Battle{
     private Weapon weapon;
     private Clothing clothing;
-    private int movableWeight;
+    private int portableWeight;
+    private int rescuedPeople;
+
+    {
+        rescuedPeople = 0;
+    }
+
     private ArrayList<Item> Inventory;
 
 
@@ -24,12 +30,12 @@ public abstract class Hero extends Character implements Battle{
         this.clothing = clothing;
     }
 
-    public int getMovableWeight() {
-        return movableWeight;
+    public int getPortableWeight() {
+        return portableWeight;
     }
 
-    public void setMovableWeight(int movableWeight) {
-        this.movableWeight = movableWeight;
+    public void setPortableWeight(int portableWeight) {
+        this.portableWeight = portableWeight;
     }
 
     public ArrayList<Item> getInventory() {
@@ -41,19 +47,19 @@ public abstract class Hero extends Character implements Battle{
     }
 
 
-    public Hero(String name, int HP, int hitDamage, Weapon weapon, Clothing clothing, int movableWeight, ArrayList<Item> inventory) {
+    public Hero(String name, int HP, int hitDamage, Weapon weapon, Clothing clothing, int portableWeight, ArrayList<Item> inventory) {
         super(name, HP, hitDamage);
         this.weapon = weapon;
         this.clothing = clothing;
-        this.movableWeight = movableWeight;
+        this.portableWeight = portableWeight;
         Inventory = inventory;
     }
 
-    public Hero(Weapon weapon, Clothing clothing, int movableWeight, ArrayList<Item> inventory) {
+    public Hero(Weapon weapon, Clothing clothing, int portableWeight, ArrayList<Item> inventory) {
         super();
         this.weapon = weapon;
         this.clothing = clothing;
-        this.movableWeight = movableWeight;
+        this.portableWeight = portableWeight;
         Inventory = inventory;
     }
 

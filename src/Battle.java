@@ -2,7 +2,7 @@ public interface Battle {
     void heroAttack(Monster monster);
     void monsterAttack(Hero hero);
 
-    String[] swords= {"Dagger","Shortsword","Longsword"};
+    String[] swords= {"Dagger","Shortsword","Longsword"};// Array olusumu var ,yapi degisecek
     int[] swordsDamages = {2,3,4};
     int[] swordsRanges = {1,3,5};
     int[] swordsWeights= {1,2,4};
